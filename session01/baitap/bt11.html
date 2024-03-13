@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [2,5,8,9,6];
+
+        for (let i = 0; i < numbers.length - 1; i++) {
+           for (let j = 0; j < numbers.length - i - 1; j++) {
+                if (numbers[j] < numbers[j + 1]) {
+                // Hoán đổi các phần tử
+                let temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+                }
+            }
+        }
+
+console.log("Dãy sắp xếp giảm dần:", numbers);
+        
+        let maxNumber = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+          if (numbers[i] > maxNumber) {
+            maxNumber = numbers[i];
+          }
+        }
+        
+        console.log("Số lớn nhất trong dãy:", maxNumber);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.information{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.information div{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.information div label{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.information .input{
+    width: 170px;
+    height: 30px;
+}
+
+.information button{
+    width: 200px;
+    height: 40px;
+}
+
+.listStudent{
+    width: 1000px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.listStudent input{
+    width: 200px;
+    height: 30px;
+}
+
+.listStudent button{
+    width: 80px;
+    height: 30px;
+}
+
+.listStudent table tr,th,td{
+    border: solid 1px black;
+    width: 125px;
+    height: 30px;
+}

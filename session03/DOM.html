@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dom{
+            color: red;
+        }
+        .setAstribute{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="dom">dom</h1>
+    <button onclick="changeColor()">click</button>
+    <img src="" alt="">
+    <p class="heading">lớp A</p>
+    <p class="heading">lớp B</p>
+    <!-- 
+        DOM: document object model
+        mô hình tài liệu dạng đối tượng
+        -khi trang web được tải thì trình duyệt sẽ tạo ra một mô hình cây DOM
+        -Các thành phần trong DOM gồm 3 thành phần
+        1.element
+        -các cách để lấy element
+        +lấy theo id: document.getElementById("id"); ==> trả về element có id đó
+        +lấy theo class: document.getElementByClassName("class"); ==> trả về html colection
+        +lấy theo thẻ tag: document.getElementByTagName("tag"); ==> trả về html colection
+        +lấy theo selector: document.querySelector(".class || #id"); ==> trả về một element duy nhất đầu tiên
+        +lấy theo selectorAll: document.querySelectorAll(".class || #id"); ==> trả về một modelist
+        2.artribute: thuộc tính
+        -classList: lấy ra danh sách class của element
+        +cung cấp các phương thức:
+        add(): thêm class
+        remove(): xóa class
+        contain(): kiểm tra xem có tồn tại class hay không
+        toggle(): như công tắc có class thì xóa đi mà không có class thì thêm vào.
+        3.text(nội dung)
+        -innerHTML
+        -textContent
+        -innerText
+     -->
+
+     <script>
+        function changeColor(){
+            let element = document.getElementById("dom");
+            element.classList.toggle("dom");//thêm thẻ class với name là dom
+            element.innerHTML = "học lập trình";
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+    <!--
+        câu trúc thư mục dự án
+        1.file gốc(root) là index.html
+        2.folder: pages: chứa các trang dự án
+        3.folder: asset: chứa folder images, video
+        4.js: chứa các file javascript
+        5.style: chứa các file css
+        6.utils: chứa các tài nguyên dùng chung
+
+        =====================================================================
+
+        cấu trúc 1 trang web 
+        1.header: phần đầu trang
+         + chứa logo, thanh tìm kiếm, thông tin của user(nếu đăng nhập r),
+           hiển thị đăng ký, đăng nhập khi chưa đăng nhập
+
+        2.main: phần thân(phần chính)
+         + chứa danh sách sản phẩm bán
+         + sản phẩm bán chạy
+         + danh sách tất cả sản phẩm để bán
+         + phân loại sản phẩm 
+         
+        3.footer: phần cuối trang
+         + thông tin về cửa hàng, liên hệ(địa chỉ, số điện thoại)
+        Dựng layout 
+     -->
+
+     <!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopee</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+/* CSS của bạn sẽ được thêm ở đây */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+}
+
+.nav-left {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left li {
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo form {
+    display: flex;
+    align-items: center;
+}
+
+.logo input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.logo button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shopee {
+    font-size: 20px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="top-bar">
+         <div class="navbar">
+            <a href="">Kênh người bán</a>
+            <a href="">Trở thành người bán Shopee</a>
+            <a href="">Tải ứng dụng</a>
+            <a href="">Kết nối</a>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+         </div>
+         <ul class="nav-left">
+            <li><i class="fas fa-bell"></i> <a href="">Thông báo</a></li>
+            <li><i class="fas fa-phone"></i><a href="">Hỗ trợ</a></li>
+            <li><i class="fas fa-globe"></i><a href="">Tiếng Việt</a></li>
+            <li><a href="">Đăng ký</a></li>
+            <li><a href="">Đăng nhập</a></li>
+         </ul>
+
+         <div class="logo">
+            <a href=""><img src="https://via.placeholder.com/150" alt=""></a>
+            <form action="">
+                <input type="text" placeholder="Shopee bao ship 0Đ - Đăng ký ngay!" maxlength="128">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          <div class="shopee">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+    </nav>
+</header>
+
+</body>
+</html>

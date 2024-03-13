@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        call backfunction
+        -là hàm
+        -được truyền làm đối số của hàm khác
+     -->
+
+     <script>
+        let sdt;
+        function xinSoDt(callback){
+            console.log("Nam gọi cho Trang xin số Quỳnh");
+            setTimeout(()=>{
+                console.log("Trang mất 3s tìm số");
+                sdt = "12345";
+                callback(sdt)
+            },3000)
+        }
+        //funtion khi có rồi mới gọi
+        function coSoMoiGoi(sdt){
+            console.log(`Nam gọi cho Quỳnh theo số ${sdt}`);
+        }
+        xinSoDt(coSoMoiGoi);
+     </script>
+</body>
+</html>

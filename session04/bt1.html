@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bt1.css">
+</head>
+<body>
+    <form id="myForm">
+        <div id="information" class="information">
+            <h2>Thông tin học viên</h2>
+            <div>
+                <span>Họ và tên</span>
+                <input id="name" class="input" type="text" placeholder="Vui lòng nhập tên">
+            </div>
+            <div>
+                <span>Email</span>
+                <input id="email" class="input" type="email" placeholder="Vui lòng nhập email">
+            </div>
+            <div>
+                <span>Số điện thoại</span>
+                <input id="phone" class="input" type="tel" placeholder="Vui lòng nhập số điện thoại">
+            </div>
+            <div>
+                <span>Quê quán</span>
+                <input id="forgot" class="input" type="text" placeholder="Vui lòng nhập quê quán">
+            </div>
+            <div>
+                <span>Giới tính</span>
+                <label for="">
+                    <input id="male" name="gender" value="Nam" type="radio">Nam
+                    <input id="female" name="gender" value="Nữ" type="radio">Nữ
+                </label>
+            </div>
+            <button type="submit" id="btn">Lưu lại</button>
+        </div>
+    </form>
+    <div id="listStudent" class="listStudent">
+        <h2>Danh sách học viên</h2>
+        <div>
+            <label for="">Tìm kiếm tên học viên: </label>
+            <input id="searchs" type="search">
+            <button onclick="search()">Search</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Gender</th>
+                <th colspan="2">Hành động</th>
+                <th><button onclick="arrange()"; >sắp xếp (alpha b)</button></th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href=""></a></td>
+                <td></td>
+            </tr> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./bt1.js"></script>
+</html>

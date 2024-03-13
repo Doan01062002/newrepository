@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Array: mảng thuộc kiểu dữ liệu phức tạp(tham chiếu reference)
+        I.Cách khai báo
+        1.let arr = [];
+        2.let student = new Array();
+
+        -các phần tử được ngăn cách nhau bởi dấu phẩy mảng có thể chứa nhiều kiểu dữ liệu khác nhau
+        -mảng đánh chỉ số index từ 0;
+        -kiểm tra độ dài của mảng: tên mảng.length
+        +các cách duyệt mảng:
+        1.dùng for
+        2.for...in: trả về chỉ mục
+        3.for...of:trả về giá trị
+        *********
+        CRUD với mảng
+        1.C:Create
+        -unshift: thêm vào đầu
+        -push:thêm vào cuối
+        -splice:thêm vào vị trí bất kì
+        2.R:Read
+        -dùng for, for-in, for-of
+        3.U:Update
+        -dùng splice
+        -dùng toán tử gán: name[index]="....";
+        4.D:Delete
+        -pop():xóa phần tử cuối trong mảng
+        -shift():xóa phần tử đầu
+        -dùng splice
+
+        II.Các phương thức làm việc với mảng
+        1.pop(): xóa cuối
+        2.push(): thêm cuối
+        3.splice(): thêm,xóa,giá trị
+        4.unshift(): thêm đầu
+        5.shift(): xóa đầu
+        6.join(): chuyển mảng thành chuỗi
+        7.split(): chuyển chuỗi thành mảng
+        8.concat(): nối các mảng tọa ra một mảng mới
+        9.slice(): chích xuất một phần tử của mảng và trả về một mảng mới
+        10.map(): tạo ra một mảng mới với một hàm cho mỗi phần tử
+        11.filter(): tọa ra một mảng mới với các giá trị thỏa mãn điều kiện và những giá trị không thỏa mãn điều kiện sẽ bị loại bỏ
+        12.forEach(): thực thi một hàm với một lần duy nhất với từng phần tử trong mảng
+        13.reduce(): áp dụng một hàm vào một giá trị tích lũy và giảm hàm xuống một phần tử
+        14.find(): tìm kiếm phần tử có giá trị thỏa mãn đầu tiên
+        15.findIndex(): tìm kiếm chỉ số của phần tử thỏa mãn điều kiện
+        16.startWith(): kiểm tra xem phần tử đầu tiên có thỏa mãn điều kiện của hàm không 
+        17.endWith(): kiểm tra xem phần tử cuối cùng trog mảng có thỏa mãn điều kiện của hàm không
+        18.charAt(): trả về một ký tự ở một vị trí trong một chuỗi
+        19.indexOf(): trả về chỉ mục của lần xuất hiện đầu tiên trong mảng
+        20.includes(): kiểm tra xem một chuỗi hay một mảng có giá trị cụ thể hay không
+        21.every(): kiểm tra tát cả các phần tử trong mảng có thỏa mãn điều kiện của hàm hay không
+        22.fill(): điển vào tất cả hoặc một phần tử của mảng một giá trị cố định
+        23.copyWhithin(): sao chép chuỗi các phần tử trong mảng và chèn nó vào vị trị bất kỳ
+        24.revese(): đảo ngược hàm
+        25.sort(): sắp sếp hàm theo thứ tự tăng dần
+     -->
+
+     <input id="input" type="text" placeholder="Mời nhập tên sản phẩm muốn mua">
+     <button id="button" onclick="addToCart()">Mua</button>
+
+     <script>
+        // // 5.join
+        // let arr = ["hoa","hồng"];
+        // let result = arr.join(" ");
+        // console.log(result);
+
+        // //6.split
+        // let text = "cố gắng học lập trình";
+        // let result = text.split(" ");
+        // console.log(result);
+
+        let student = ["hoa", "hồng","minh","hùng"];
+        student.splice(2,0,"nhung");
+        for (let i=0; i< student.length;i++){
+            console.log(student[i]);
+        }
+
+        console.log("************************");
+        for(const key in student){
+            console.log(student[key]);
+        }
+
+        console.log("************************");
+        for(const value of student){
+            console.log(value);
+        }
+
+        let cart = [
+            {
+                id: 1,
+                name: "iphone5",
+                stock: 5,
+                price: 5000,
+            },
+            {
+                id: 2,
+                name: "iphone6",
+                stock: 7,
+                price: 6000,
+            },
+            {
+                id: 3,
+                name: "iphone7",
+                stock: 8,
+                price: 8000,
+            },
+        ];
+
+        let sum = 0;
+        for(let i=0; i<cart.length; i++){
+            sum += cart[i].stock*cart[i].price;
+        }
+
+        console.log(sum);
+
+        
+        // **************************
+        let productss = ["rau","thịt","bánh"];
+        let a = "thịt";
+        let check = true;
+        for(let i=0;i<productss.length;i++){
+            if(a === productss[i]){
+                check = true;
+                break;
+            }else{
+                check =false;
+            }
+        }
+        if(check){
+            console.log("giỏ hàng có " +a);
+        }else{
+            console.log("giỏ hàng không có " +a);
+        }
+
+        // ***********************
+        let products = [
+            {
+                id: 1,
+                name: "iphone5",
+                quantiy:"",
+                price: 5000,
+            },
+            {
+                id: 2,
+                name: "iphone6",
+                quantiy:"",
+                price: 6000,
+            },
+            {
+                id: 3,
+                name: "iphone7",
+                quantiy:"",
+                price: 8000,
+            },
+        ];
+        
+        var textInput = document.getElementById('input');
+        let carts =[];
+        function addToCart(){
+            let index = 0;
+            let checks = true;
+            for(let i=0;i<products.length;i++){
+                if(products[i].name == textInput.value){
+                    checks = true;
+                    break;
+                }else{
+                    checks = false;
+                }
+            }
+            if(checks){
+            console.log("giỏ hàng có ");
+            for(let i=0; i<products.length; i++){
+                if(products[i].name == textInput.value){
+                    carts.push(products[i]);
+                    for(let j=0;j<carts.length; j++){
+                        if(carts[j].name == textInput.value){
+                            carts[j].quantiy = index++;
+                        }
+            }
+                }
+            }
+            }else{
+            console.log("giỏ hàng không có ");
+            }
+
+            
+
+            console.log(carts);
+
+        }
+
+        
+        /*
+        Phân tích bài toán 
+        1.lấy giá trị người dùng nhập vào
+        2.kiểm tra trong cửa hàng có tồn tại sản phẩm để bán hay không
+        3.Nếu có thì thêm vào giỏ hàng gồm các thuộc tính 
+        {
+            id:"",
+            name:"",
+            quantity:"",
+            price:"",
+        }
+
+        Kiểm tra xem sản phẩm thêm vào trong giỏ hàng hay chưa nếu có rồi thì tăng số lượng còn không có thì thêm vào bình thường.
+        */
+
+     </script>
+</body>
+</html>

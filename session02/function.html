@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- FUNTION
+    I-gồm các câu lệnh thực hiện một chức năng duy nhất
+    1.decleration
+    function myFunction() {
+    // code của hàm
+    }
+
+    2.expression function
+    var myFunction = function() {
+    // code của hàm
+    };
+
+    3.arrow-function
+    var myFunction = () => {
+    // code của hàm
+    };
+
+    4.Immediately Invoked Function Expression (IIFE)
+    -thường được dùng làm thư viện vì nó có khả năng đóng gói
+    (function() {
+    // code của hàm
+    })();
+
+    II-Cách thực thi hàm, return trong hàm
+
+    III-Tham số, đối số trong hàm
+
+    IV-Đệ quy
+
+    V-call-back function    
+    function myFunction(callback) {
+    // code của hàm
+    // Gọi lại hàm callback
+    callback();
+    }
+    function myCallback() {
+    // code của callback
+    }
+    myFunction(myCallback);
+
+    -->
+
+    <script>
+        // khai báo một hàm function decration
+        function sayHello(){
+            console.log("Hello");
+        };
+        sayHello();
+
+        // expression funtion
+        let result = function(){
+            console.log("expression function");
+        };
+        result();
+
+        // arrow function
+        let arrow = () =>{
+            console.log("arrow function");
+        };
+        arrow();
+
+        let arrow1 = () => console.log("arrow1");
+        arrow1();
+        function a1(){
+            console.log("a1");
+        }
+        function a1(){
+            console.log("a1");
+        }
+        a1();
+        a1();
+        (function a1(){
+            console.log("a1");
+        })();
+        (function a1(){
+            console.log("a11");
+        })();
+    </script>
+</body>
+</html>

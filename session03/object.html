@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- 
+    Object:đối tượng
+    I.Cách khởi tạo đối tượng
+    1.let obj ={
+      name:"hoa"
+    }
+    2.let newObj = new Object();
+    3.dùng hàm tạo contructer
+    4.dùng class
+    II.Thuộc kiểu dữ liệu phức tạp(reference type)
+    -một object sẽ gồm các cặp key(thuộc tính property) và value
+    1.CRUD
+
+    III/Tham chiếu tham trị
+   -->
+    <script>
+      //  let a=5;
+      //  let b=15;
+      //  a=15;
+      //  console.log("b",b);//b không thay đổi theo a
+      //  //kiểu dữ liệu tham trị chỉ sử dụng được với dữ liệu đơn giản-hoạt động theo vùng lưu trữ tĩnh
+      //  let obj1 = {
+      //   name:"hồng",
+      //  };
+      //  let obj2 = obj1;
+      //  obj1.name = "hoa";
+      //  console.log(obj2.name);//bị thay đổi theo obj1
+      //  //kiểu dữ liệu tham chiếu-kiểu dữ liệu phức tạp-chạy theo vùng lưu trữ động
+
+       //Toán tử spread
+       let obj1 = {
+        name:"hồng",
+        address:{
+          city:"HN",
+        },
+       };
+      //  let obj2 = {...obj1};
+      let obj2 = JSON.parse(JSON.stringify(obj1));
+       //tạo ra một địa chỉ với ô nhớ mới
+       obj1.name = "minh thư";
+       obj1.address.city = "HCM";
+       console.log(obj2.name);
+       console.log(obj2.address.city);
+    </script>
+</body>
+</html>
